@@ -14,8 +14,12 @@ class AsesorModel
         $this->response = new Response();
     }
 
+    /**
+     * @param  [String] codigo del asesor
+     * @return [array] retorna la data
+     */
     public function listar($codAsesor = '')
-    {        
+    {
         try {
             // OBTIENE LA DATA DE LOS ASESORES
             $queryAsesor = $this->db->prepare('CALL sp_asesor(?)');

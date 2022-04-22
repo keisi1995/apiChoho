@@ -29,7 +29,7 @@ class Auth
         $token = array(
             'ruc'      => '20515257102',
             'user'     => 'sistema',
-            'password' => '77289003'
+            'password' => '-'
         );
         return JWT::encode($token, self::$secret_key);
     }

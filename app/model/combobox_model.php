@@ -14,17 +14,21 @@ class ComboboxModel
         $this->response = new Response();
     }
 
+    /**
+     * @param  [Integer] id tipo de listado para ejecutar el store combobox
+     * @return [array] retorna la data
+     */
     public function listar($tip)
     {
-        try {            
+        try {
             $query = $this->db->prepare('CALL sp_combobox(?)');
             $query->execute(array($tip));
             $objData = $query->fetchAll();
             $query->closeCursor();
 
             $this->response->result = array(
-                'total'    => count($objData),
-                'items'    => $objData,                
+                'total' => count($objData),
+                'items' => $objData,
             );
 
             return $this->response->SetResponse(true);
