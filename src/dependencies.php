@@ -34,7 +34,8 @@ $container['db'] = function($c){
 
 // Models
 $container['model'] = function($c){
-    return (object)[               
+    return (object)[
         'asesor' => new App\Model\AsesorModel($c->db)
+        ,'combobox' => new App\Model\ComboboxModel($c->db)
     ];
 };
