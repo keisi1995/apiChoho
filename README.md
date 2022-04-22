@@ -3,9 +3,10 @@
 ## Instalación
 
 requerimiento:
-	version php -> ^5.6.30
+	version php -> >=5.6.30
 	extension -> php_pdo_mysql.dll
 				 php_mysqli.dll
+	apache server -> importante tener instalado el servidor apache
 
 archivo config:
 	src/settings.php -> modificar apartir de la linea 20, reemplazar los valores de la propiedad dns, user y pass.
