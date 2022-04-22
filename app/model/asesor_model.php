@@ -15,8 +15,7 @@ class AsesorModel
     }
 
     public function listar($codAsesor = '')
-    {
-        // echo $codAsesor;
+    {        
         try {
             // OBTIENE LA DATA DE LOS ASESORES
             $queryAsesor = $this->db->prepare('CALL sp_asesor(?)');
